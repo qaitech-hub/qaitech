@@ -1,0 +1,30 @@
+export const login = async (values) => {
+  // в values получаем {email, password}
+  const res = await fetch(
+    `${process.env.REACT_APP_SERVER_URL}/api/auth/login`,
+    {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    }
+  )
+    .catch((err) => {
+      return { error: "Something went wrong" };
+    })
+    .then((res) => {
+      if (res.status >= 400) return res.json();
+
+      if (!res || !res.ok) return { error: "Something went wrong" };
+
+      return res.json();
+    })
+    .then((data) => {
+      if (!data) return { error: "Something went wrong" };
+      else return data;
+    });
+
+  return res;
+};

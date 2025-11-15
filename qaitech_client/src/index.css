@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: -webkit-fill-available;
+  -webkit-tap-highlight-color: transparent; /* remove blue bg on click */
+  margin: 0;
+  background-color: #080b1a;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .hideScrollbarNavMobile {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hideScrollbarNavMobile::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.hideScrollbarNav {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.hideScrollbarNav::-webkit-scrollbar {
+  display: none;
+}
+
+/* land */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
