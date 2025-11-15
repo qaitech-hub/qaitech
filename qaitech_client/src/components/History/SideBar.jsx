@@ -29,7 +29,6 @@ const SideBar = () => {
     if (loading) return;
     setLoading(true);
     const res = await getReportsForHistory(workSpaceId);
-    console.log("client fuckers", res);
 
     if (!!res?.error) {
       toast.error(res?.error);

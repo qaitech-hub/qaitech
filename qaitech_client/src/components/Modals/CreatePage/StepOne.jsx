@@ -191,7 +191,6 @@ const StepOne = ({
         projectId: params?.workSpaceId,
         file: acceptedFiles,
       });
-      console.log("fucking res: ", res);
       if (!!res?.error) {
         if (res?.details?.includes("AI parser failed, lets switch it")) {
           setFormData({ ...formData, isAi: false });

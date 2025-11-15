@@ -144,7 +144,6 @@ const StepOne = ({
         pageId: selectedPage?.id,
         viewport: selectedPage?.viewport?.title,
       });
-      console.log("fucking res: ", res);
       if (!!res?.error) {
         toast.error(res?.error);
         setStatus(res);

@@ -30,7 +30,6 @@ const LicenceKeyPage = () => {
   const handleLicenseCheck = async () => {
     const res = await checkLicense(formData?.licenseKey);
 
-    console.log(res, "assfuck");
     // // console.log(res);
     // setResult(res);
     // setPending(false);
